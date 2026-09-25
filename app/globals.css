@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --ink:#0b0c0c; --panel:#151716; --line:#30332f; --lime:#c9ff38; --muted:#9ca09a; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; color:#f6f7f4; background:var(--ink); font-family:"DM Sans",sans-serif; }
+h1,h2,h3,.display { font-family:"Oswald",sans-serif; }
+a { color:inherit; text-decoration:none; }
+button,select,input { font:inherit; }
+button { cursor:pointer; }
+.container-shell { width:min(1180px,calc(100% - 40px)); margin-inline:auto; }
+.lime { color:var(--lime); }
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:.6rem; min-height:46px; padding:.7rem 1.1rem; border:1px solid var(--line); text-transform:uppercase; font-size:.78rem; font-weight:800; letter-spacing:.06em; transition:.2s; }
+.btn-primary { color:#0b0c0c; background:var(--lime); border-color:var(--lime); }
+.btn-primary:hover { background:#dcff7d; transform:translateY(-2px); }
+.btn-ghost:hover { border-color:var(--lime); color:var(--lime); }
+.section-title { font-size:clamp(2.3rem,5vw,4.4rem); line-height:.95; letter-spacing:-.03em; }
+.tag { display:inline-flex; padding:.28rem .55rem; border:1px solid #4b5049; color:#d9ddd4; font-size:.65rem; font-weight:800; letter-spacing:.09em; text-transform:uppercase; }
+.grid-texture { background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px); background-size:48px 48px; }
+@media (max-width:640px){ .container-shell{width:min(100% - 24px,1180px)} }
