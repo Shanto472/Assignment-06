@@ -1,0 +1,11 @@
+import Image from "next/image";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown,faBolt,faChartLine,faDumbbell } from "@fortawesome/free-solid-svg-icons";
+import Library from "@/components/Library";
+import { getWorkouts } from "@/lib/workouts";
+export default async function Home(){const workouts=await getWorkouts();return <>
+  <section className="grid-texture overflow-hidden"><div className="container-shell grid min-h-[650px] items-center gap-12 py-16 lg:grid-cols-[1.05fr_.95fr]">
+    <div><p className="mb-5 text-xs font-extrabold tracking-[.3em] lime"><FontAwesomeIcon icon={faBolt} className="mr-2"/>WORKOUT LIBRARY</p><h1 className="text-[clamp(3.5rem,8vw,7rem)] font-bold uppercase leading-[.87] tracking-[-.045em]">Train with intent.<br/><span className="lime">Log every set.</span></h1><p className="mt-7 max-w-xl text-base leading-7 text-[#a8ada5]">FitLog is a dark, no-nonsense gym companion: pick a lift, lock it into today&apos;s plan, and watch the week&apos;s work add up.</p><Link href="#library" className="btn btn-primary mt-8"><FontAwesomeIcon icon={faDumbbell}/>Browse Workouts<FontAwesomeIcon icon={faArrowDown}/></Link><div className="mt-10 flex gap-8 border-t border-[#30332f] pt-5 text-xs uppercase tracking-widest text-[#747970]"><span><b className="mr-2 text-xl text-white">12</b>Lifts</span><span><b className="mr-2 text-xl text-white">7</b>Groups</span><span><b className="mr-2 text-xl text-white"><FontAwesomeIcon icon={faChartLine}/></b>Track live</span></div></div>
+    <div className="relative hidden lg:block"><div className="absolute -inset-8 rotate-3 border border-[#c9ff3830]"/><div className="relative aspect-[4/5] overflow-hidden bg-[#242723]"><Image src={workouts[7]?.image || workouts[0].image} alt="Athlete training" fill priority sizes="45vw" className="object-cover"/><div className="absolute inset-0 bg-gradient-to-t from-[#0b0c0c] via-transparent to-transparent"/><div className="absolute bottom-6 left-6 border-l-4 border-[#c9ff38] pl-4"><p className="display text-3xl font-bold">NO SHORTCUTS.</p><p className="text-sm text-[#b8bdb5]">Just honest work, logged.</p></div></div></div>
+  </div></section><Library workouts={workouts}/></>}

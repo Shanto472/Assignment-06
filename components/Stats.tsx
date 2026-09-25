@@ -1,0 +1,3 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClock,faFire,faStar } from "@fortawesome/free-solid-svg-icons";
+export default function Stats({duration,calories,rating}:{duration:number;calories:number;rating:number}){return <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-[#b4b8b1]"><span><FontAwesomeIcon icon={faClock} className="mr-1.5 text-[#c9ff38]"/>{duration} min</span><span><FontAwesomeIcon icon={faFire} className="mr-1.5 text-[#ff6847]"/>{calories} kcal</span><span><FontAwesomeIcon icon={faStar} className="mr-1.5 text-[#ffc94a]"/>{rating}</span></div>}

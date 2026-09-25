@@ -1,0 +1,1 @@
+export default function Loading(){return <div className="grid min-h-[65vh] place-items-center"><div className="text-center"><div className="mx-auto h-12 w-12 animate-spin rounded-full border-4 border-[#2b2e2a] border-t-[#c9ff38]"/><p className="mt-4 text-sm uppercase tracking-[.2em] text-[#a5aaa2]">Loading workouts…</p></div></div>}
