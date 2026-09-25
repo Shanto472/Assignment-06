@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound(){return <section className="grid min-h-[70vh] place-items-center px-5 text-center"><div><p className="display text-[10rem] font-bold leading-none text-[#c9ff38]">404</p><h1 className="text-4xl font-bold uppercase">Lost your set?</h1><p className="mx-auto mt-4 max-w-md text-[#9ca199]">That page doesn&apos;t exist. Head back to the workout floor and keep moving.</p><Link className="btn btn-primary mt-7" href="/">Go to workouts</Link></div></section>}

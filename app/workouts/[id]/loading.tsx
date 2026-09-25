@@ -1,0 +1,1 @@
+export default function Loading(){return <div className="container-shell grid min-h-[70vh] animate-pulse gap-10 py-16 lg:grid-cols-2"><div className="bg-[#20231f]"/><div className="space-y-6"><div className="h-6 w-32 bg-[#20231f]"/><div className="h-36 bg-[#20231f]"/><div className="h-20 bg-[#20231f]"/><div className="h-72 bg-[#20231f]"/></div></div>}
