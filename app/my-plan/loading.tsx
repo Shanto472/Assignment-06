@@ -1,0 +1,1 @@
+export default function Loading(){return <div className="grid min-h-[65vh] place-items-center"><p className="animate-pulse text-sm uppercase tracking-[.2em] text-[#a5aaa2]">Loading workouts…</p></div>}
