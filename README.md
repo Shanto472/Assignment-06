@@ -4,7 +4,7 @@ FitLog is a responsive, dark-themed workout companion built for focused training
 
 ## Live project
 
-- Local development: `http://localhost:3000`
+- Local development: `http://localhost:3003/`
 - Production URL: add your Vercel, Netlify, or Cloudflare Pages URL after deployment.
 
 ## Technologies
@@ -34,7 +34,7 @@ npm install
 npm run dev
 ```
 
-Then open `http://localhost:3000`.
+Then open `http://localhost:3003/`.
 
 ## Production build
 
