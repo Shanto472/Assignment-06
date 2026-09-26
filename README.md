@@ -4,8 +4,8 @@ FitLog is a responsive, dark-themed workout companion built for focused training
 
 ## Live project
 
+- Production: [https://assignment-06-n59foykjr-mdshantoali2023-4234.vercel.app/](https://assignment-06-n59foykjr-mdshantoali2023-4234.vercel.app/)
 - Local development: `http://localhost:3003/`
-- Production URL: add your Vercel, Netlify, or Cloudflare Pages URL after deployment.
 
 ## Technologies
 
