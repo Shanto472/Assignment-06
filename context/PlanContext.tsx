@@ -29,18 +29,18 @@ export function PlanProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => { if(hydrated) localStorage.setItem("fitlog-saved",JSON.stringify(saved)); },[saved,hydrated]);
 
   const addToPlan = useCallback((workout: Workout) => {
-    setPlan(current => {
-      if(current.some(item=>item.id===workout.id)){ toast.error("Already in today's plan"); return current; }
-      if(current.length>=5){ toast.error("Today's plan is capped at five lifts"); return current; }
-      toast.success("Added to today's plan"); return [...current,{...workout,done:false}];
-    });
-  },[]);
+    if(plan.some(item=>item.id===workout.id)){ toast.error("Already in today's plan"); return; }
+    if(saved.some(item=>item.id===workout.id)){ toast.error("Remove this workout from Saved first"); return; }
+    if(plan.length>=5){ toast.error("Today's plan is capped at five lifts"); return; }
+    setPlan(current=>[...current,{...workout,done:false}]);
+    toast.success("Added to today's plan",{id:`plan-${workout.id}`});
+  },[plan,saved]);
   const saveForLater = useCallback((workout: Workout) => {
-    setSaved(current => {
-      if(current.some(item=>item.id===workout.id)){ toast.error("Already saved for later"); return current; }
-      toast.success("Saved for later"); return [...current,workout];
-    });
-  },[]);
+    if(saved.some(item=>item.id===workout.id)){ toast.error("Already saved for later"); return; }
+    if(plan.some(item=>item.id===workout.id)){ toast.error("Remove this workout from today's plan first"); return; }
+    setSaved(current=>[...current,workout]);
+    toast.success("Saved for later",{id:`saved-${workout.id}`});
+  },[plan,saved]);
   const removeFromPlan = (id:number) => { setPlan(p=>p.filter(x=>x.id!==id)); toast.success("Removed from today's plan"); };
   const removeFromSaved = (id:number) => { setSaved(p=>p.filter(x=>x.id!==id)); toast.success("Removed from saved"); };
   const markDone = (id:number) => { setPlan(p=>p.map(x=>x.id===id?{...x,done:!x.done}:x)); toast.success("Workout status updated"); };
