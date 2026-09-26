@@ -20,12 +20,12 @@ FitLog is a responsive, dark-themed workout companion built for focused training
 ## Key features
 
 1. Responsive 12-workout library with API data, loading states, and offline fallback data.
-2. Live search plus sorting by duration, calories, or rating.
-3. Detailed workout pages with tags, specifications, instructions, and plan/save actions.
-4. Persistent Today's Plan and Saved collections with synchronized navbar counters.
-5. Five-workout plan cap, live exercise/minute/calorie metrics, mark-as-done, and remove actions.
+2. Sorting by duration, calories, or rating directly inside both My Plan tabs.
+3. Detailed workout pages with tags, specifications, instructions, and mutually exclusive plan/save actions.
+4. Persistent Today's Plan and Saved collections with synchronized navbar counters and duplicate protection.
+5. Five-workout plan cap, tab-specific live exercise/minute/calorie metrics, colorful mark-as-done, and remove actions.
 6. Toast feedback for every meaningful action and disabled duplicate controls.
-7. Mobile, tablet, and desktop layouts, custom metadata, and a branded 404 page.
+7. Screenshot-matched mobile, tablet, and desktop layouts, custom metadata, and a branded 404 page.
 
 ## Run locally
 
